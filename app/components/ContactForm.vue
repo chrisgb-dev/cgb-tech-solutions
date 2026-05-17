@@ -31,11 +31,11 @@
         </UFormField>
 
         <input name="website" tabindex="-1" autocomplete="off">
+        <NuxtTurnstile ref="turnstile" v-model="turnstileToken" />
 
         <UFormField class="my-6">
             <UButton :loading="loading" :disabled="!turnstileToken" type="submit" icon="i-lucide-send">Send</UButton>
         </UFormField>
-        <NuxtTurnstile ref="turnstile" v-model="turnstileToken" />
     </UForm>
 
 </template>

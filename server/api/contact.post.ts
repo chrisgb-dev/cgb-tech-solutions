@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig();
     const body = await readBody(event);
     const { name, email, message, company, budget, timeframe, turnstileToken, website } = body;
-    const fuv = "bar";
+    
     if (website) {
         return {
             status: 400,

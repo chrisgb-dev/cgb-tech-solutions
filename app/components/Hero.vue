@@ -11,7 +11,9 @@ const links = ref<ButtonProps[]>([
     {
         label: 'Contact Us',
         to: '/contact',
-        trailingIcon: 'i-lucide-arrow-right'
+        trailingIcon: 'i-lucide-arrow-right',
+        color: 'primary',
+
     },
     // {
     //     label: 'CTA 2',

@@ -1,9 +1,24 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+
+@theme {
+  --color-brand-50: oklch(0.964 0.027 217.09);
+  --color-brand-100: oklch(0.934 0.048 216.11);
+  --color-brand-200: oklch(0.86 0.116 212.71);
+  --color-brand-300: oklch(0.797 0.134 211.52);
+  --color-brand-400: oklch(0.705 0.118 211.4);
+  --color-brand-500: oklch(0.61 0.103 212.06);
+  --color-brand-600: oklch(0.517 0.087 211.8);
+  --color-brand-700: oklch(0.417 0.07 211.47);
+  --color-brand-800: oklch(0.323 0.054 210.05);
+  --color-brand-900: oklch(0.228 0.039 212.4);
+  --color-brand-950: oklch(0.185 0.031 214.31);
+}
+
 :root {
-  --ui-primary: var(--ui-color-primary-700);
-  --ui-secondary: var(--ui-color-secondary-700);
+  --ui-primary: var(--color-brand-400);
+  --ui-secondary: var(--ui-color-secondary-500);
 
   --ui-bg: var(--ui-color-neutral-50);
   --ui-text: var(--ui-color-neutral-900);
