@@ -31,7 +31,7 @@
         </UFormField>
 
         <input name="website" tabindex="-1" autocomplete="off">
-        <NuxtTurnstile ref="turnstile" v-model="turnstileToken" />
+        <!-- <NuxtTurnstile ref="turnstile" v-model="turnstileToken" /> -->
 
         <UFormField class="my-6">
             <UButton :loading="loading" :disabled="!turnstileToken" type="submit" icon="i-lucide-send">Send</UButton>
@@ -97,7 +97,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ...event.data, turnstileToken: turnstileToken.value })
+        body: JSON.stringify({ ...event.data })
+        // body: JSON.stringify({ ...event.data, turnstileToken: turnstileToken.value })
     })
     loading.value = false;
 
