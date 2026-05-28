@@ -4,13 +4,7 @@ import { process } from "zod/v4/core";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxtjs/turnstile',
-    '@nuxt/content',
-    '@nuxtjs/seo'
-  ],
+  modules: ['@nuxt/image', '@nuxt/ui', '@nuxtjs/turnstile', '@nuxt/content', '@nuxtjs/seo', 'nuxt-umami'],
   css: ['~/assets/css/main.css'],
   turnstile: {
     siteKey: '',
@@ -77,5 +71,11 @@ export default defineNuxtConfig({
       ogImage: '/cgb-logo-icon-only.png',
       robots: 'index, follow',
     },
+  },
+  umami: {
+    id: "29b0a41c-1856-4276-b1ac-3dd58618bcae",
+    host: "https://cloud.umami.is",
+    autoTrack: true,
+    ignoreLocalhost: true
   },
 })

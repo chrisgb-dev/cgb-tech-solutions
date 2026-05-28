@@ -20,6 +20,7 @@
     "@takumi-rs/wasm": "^1.6.0",
     "better-sqlite3": "^12.10.0",
     "nuxt": "^4.4.5",
+    "nuxt-umami": "^3.2.1",
     "pocketbase": "^0.26.9",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
