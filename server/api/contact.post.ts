@@ -11,14 +11,14 @@ export default defineEventHandler(async (event) => {
             message: 'Bad request.',
         };
     }
-    // const isValidToken = await verifyTurnstileToken(turnstileToken);
+    const isValidToken = await verifyTurnstileToken(turnstileToken);
 
-    // if (!isValidToken) {
-    //     return {
-    //         status: 422,
-    //         message: 'Invalid Turnstile token.',
-    //     };
-    // }
+    if (!isValidToken) {
+        return {
+            status: 422,
+            message: 'Invalid Turnstile token.',
+        };
+    }
 
     if (!name || !email || !message) {
         return {
