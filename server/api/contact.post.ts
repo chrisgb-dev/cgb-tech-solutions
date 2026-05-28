@@ -32,14 +32,13 @@ export default defineEventHandler(async (event) => {
     const pbAuthData = await pb.collection('users').authWithPassword(config.pbUsername, config.pbPassword);
 
     try {
-        await pb.collection('business_contacts').create({
+        await pb.collection('queries').create({
             name,
             email,
             message,
             company,
             budget,
-            timeframe,
-            status: 'lead',
+            timeframe
         });
         
         await fetch(config.pipedreamNotificationUrl, {

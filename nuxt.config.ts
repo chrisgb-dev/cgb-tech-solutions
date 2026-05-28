@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/turnstile',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/seo'
   ],
   css: ['~/assets/css/main.css'],
   turnstile: {
